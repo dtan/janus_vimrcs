@@ -25,6 +25,9 @@ set foldmethod=syntax
 set foldlevel=10
 set nofoldenable
 
+filetype plugin on
+colorscheme koehler
+
 "
 "key mappings"
 map <C-h> <C-w>h
