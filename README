@@ -1,0 +1,7 @@
+[janus]: https://github.com/carlhuda/janus
+In order to use these files correctly with [janus][janus], both .vimrc* files need to be symlinked to your home directory:
+
+$ git clone https://github.com/dtan/janus_vimrcs.git ~/.janus_vimrcs
+$ ln -s ~/.janus_vimrcs/.vimrc.before ~/.vimrc.before
+$ ln -s ~/.janus_vimrcs/.vimrc.after ~/.vimrc.after
+
