@@ -18,9 +18,6 @@ autocmd VimEnter *  NERDTree
 " show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
-" change <Leader> from \ to ,
-let mapleader=","
-
 " syntax highlighting
 syntax on
 
@@ -43,7 +40,11 @@ set number
 set autoindent
 
 " reset the tab spacing, whether it is spaces or tabs
+" rethink this - will reset even quoted strings
 retab
+
+" sets the line numbers/percentage in file beneath buffers: 20/100[20%]
+set ruler
 
 " code folding
 set foldmethod=syntax

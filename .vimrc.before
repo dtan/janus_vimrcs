@@ -1,1 +1,4 @@
 " before
+
+" change <Leader> from \ to ,
+let mapleader=","
