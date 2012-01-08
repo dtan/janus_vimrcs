@@ -1,36 +1,63 @@
-" Use Node.js for JavaScript interpretation
-let $JS_CMD='node'
-"call pathogen#infect()
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
-" enter NERDTree on new window
-autocmd VimEnter *  NERDTree
-let NERDTreeShowHidden=1
-" syntax highlighting
-syntax on
-set transparency=30
-" soft tabs
-set expandtab
-" 2 spaces per tab
-set tabstop=2
-" do not wrap lines
-set nowrap
-" show line numbers
-set number
-" keep the indent level when hitting return
-set autoindent
-retab
 
-set foldmethod=syntax
-set foldlevel=10
-set nofoldenable
+" |buffer-variable|    b:	  Local to the current buffer.
+" |window-variable|    w:	  Local to the current window.
+" |global-variable|    g:	  Global.
+" |local-variable|     l:	  Local to a function.
+" |script-variable|    s:	  Local to a |:source|'ed Vim script.
+" |function-argument|  a:	  Function argument (only inside a function).
+" |vim-variable|       v:	  Global, predefined by Vim.
 
-filetype plugin on
 colorscheme koehler
 
-"
+" Use Node.js for JavaScript interpretation
+let $JS_CMD='node'
+
+" enter NERDTree on new window
+autocmd VimEnter *  NERDTree
+
+" show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+" change <Leader> from \ to ,
+let mapleader=","
+
+" syntax highlighting
+syntax on
+
+" allow for filetype plugins
+filetype plugin on
+
+" 30% transparency
+set transparency=30
+
+" 2 spaces per tab, soft tabs
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" do not wrap lines
+set nowrap
+
+" show line numbers
+set number
+
+" keep the indent level when hitting return
+set autoindent
+
+" reset the tab spacing, whether it is spaces or tabs
+retab
+
+" code folding
+set foldmethod=syntax
+" The higher the more folded regions are open. 0, all folds are closed
+set foldlevel=10
+" file does not fold by default everytime it is open
+set nofoldenable
+
 "key mappings"
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+" scrolls window by 3 lines instead of default 1
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
