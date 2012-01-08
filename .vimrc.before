@@ -8,4 +8,6 @@
 " |vim-variable|       v:	  Global, predefined by Vim.
 
 " change <Leader> from \ to ,
-let mapleader=","
+let mapleader="-"
+
+call janus#add_group("ftplugin")
