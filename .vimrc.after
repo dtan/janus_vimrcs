@@ -61,4 +61,5 @@ map <C-l> <C-w>l
 " scrolls window by 3 lines instead of default 1
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
-
+" gives more context around cursor when scrolling up/down
+set scrolloff=3
